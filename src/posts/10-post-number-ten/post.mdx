@@ -1,0 +1,84 @@
+---
+title: Gatsby Tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2020-07-21
+author: Raul Sanchez
+category: gatsby
+readTime: 34
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+## My first MDX file
+
+**I'm baby vexillologist messenger bag hexagon, godard you probably haven't heard of them
+beard banh mi ugh. Typewriter post-ironic banjo flannel williamsburg. Franzen pitchfork church-key,
+swag truffaut offal glossier tumblr semiotics mumblecore chia hashtag wayfarers.**
+Echo park 8-bit artisan beard, before they sold out lumbersexual pork belly DIY XOXO chambray four loko meh PBR&B
+yr. 90's activated charcoal iPhone, glossier dreamcatcher etsy heirloom literally taxidermy cray edison bulb.
+
+# My heading 1
+
+<h1>JSX Markdown</h1>
+
+<div className="code">
+
+```js
+const firstName = 'Raul'
+const lastName = 'Sanchez'
+```
+
+</div>
+
+
+
+<div className="nice-text">
+
+<h3>Nice Text</h3>
+
+<FiInfo className="nice-text-icon"></FiInfo>
+Fingerstache venmo meditation, trust fund 8-bit master cleanse irony offal
+wayfarers squid selfies literally jean shorts. XOXO selfies vaporware kale chips
+jean shorts lumbersexual pork belly. Listicle offal hexagon gochujang irony deep
+v, cray hell of. Pitchfork green juice mixtape lyft glossier, direct trade YOLO
+man braid. Chartreuse tacos pork belly pickled leggings schlitz, narwhal PBR&B
+affogato godard vexillologist retro selfies kale chips keffiyeh.
+
+</div>
+
+<h3>React Components</h3>
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+<Link to="/posts" className="btn center-btn">
+  All posts
+</Link>
